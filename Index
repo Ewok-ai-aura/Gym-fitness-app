@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Fitness App</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6ffe6;
+      color: #003300;
+    }header {
+  background-color: #009933;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+button {
+  padding: 1rem;
+  font-size: 1.1rem;
+  background-color: #ccff99;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+#content {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  margin: 1rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.tabs {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #66cc66;
+  padding: 0.5rem 0;
+}
+
+.tabs button {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1rem;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🏋️ My Fitness App</h1>
+  </header>  <main>
+    <section class="buttons">
+      <button onclick="showWorkout()">Workout Plans</button>
+      <button onclick="showNutrition()">Nutrition Tips</button>
+      <button onclick="showProgress()">Track Progress</button>
+    </section><section id="content">
+  <p>Welcome! Choose an option above to get started.</p>
+</section>
+
+  </main>  <nav class="tabs">
+    <button onclick="switchTab('home')">Home</button>
+    <button onclick="switchTab('profile')">Profile</button>
+    <button onclick="switchTab('settings')">Settings</button>
+  </nav>  <script>
+    function showWorkout() {
+      document.getElementById('content').innerHTML = '<h2>Workout Plans</h2><p>Here are your daily workout routines and goals!</p>';
+    }
+
+    function showNutrition() {
+      document.getElementById('content').innerHTML = '<h2>Nutrition Tips</h2><p>Balanced diet advice and meal plans to fuel your gains.</p>';
+    }
+
+    function showProgress() {
+      document.getElementById('content').innerHTML = '<h2>Progress Tracker</h2><p>Log your weight, reps, and improvements here.</p>';
+    }
+
+    function switchTab(tab) {
+      alert('Switched to ' + tab + ' tab! (You can add real tab views later)');
+    }
+  </script></body>
+</html>
